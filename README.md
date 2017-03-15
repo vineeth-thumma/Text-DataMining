@@ -1,26 +1,13 @@
-# Classification-of-Documents-based-on-similarity
-It tries to classify a set of documents based on the words in text and how similar they are to other documents.
+# Text Data Mining
 
-It creates a feature vector from all bag of words of the documents. It creates both 1-grams and 3-grams. 3-grams are  
-better because they try to capture particular phrases and order of words in the documents, but with 3-grams the 
-feature vector becomes really large so we have to make a decision between efficiency and precision.
+The aim is to build a Document Classifier using different classifiers and compare their accuracy and scalability.
+The documents dataset is split into training and testing sets to build and validate the model respectively.
 
-Once the feature vectors are created then I am splitting the documents into training and testing to check accuracy of 
-various classifiers.
-
-Some of the Classifiers that I used are:
-  Navie Bayes Classifier.
-  Decision Tree Classifier.
-  K-Nearest Neighbors Classifier.
-  Min-Hash based Classifier.
-  Apriori Classifier.
+The classifiers used are:
+  -Navie Bayes classifier
+  -Decision Tree classifier
+  -K-Nearest Neighbors classifier
+  -Apriori Algorithm (classification by generating Association Rules)
   
-Of all the above classifiers the fastest was decision tree based classiier, but with decision tree classifier 
-there is the problem of overfitting. Apriori and Naive Bayes were also closer in time takn to Decision tree but Naive Bayes
-accuracy was hogher. 
+Calculated similarity between the documents using Min-wise Hashing. The efficacy and efficiency of the Min-Hash sketch is evaluated by comparing it with Jaccard similarity which is true similarity baseline.
 
-Min Hash gave the highest accuracy among all the classifier but it was also one of the very slow in comparison to above three
-classifiers. 
-K-nearst neighbors has a very long training period and the accuracy was less than all other classifiers. 
-Also for K-nearest neighbors we have decide on 'k' very carefully as it has risk of both overfitting and underfitting, 
-also it effects the efficiency of the classifier. 
